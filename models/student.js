@@ -9,4 +9,4 @@ const studentSchema = new Schema({
     lastName: String
 })
 
-var studentModel = mongoose.model('studentModel','studentSchema')
+var student = mongoose.model('student','studentSchema')

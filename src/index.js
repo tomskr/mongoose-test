@@ -4,6 +4,9 @@ const path = require('path');
 const { prototype } = require('stream');
 const app = express()
 
+//modelsr
+const cours = require("models/cours")
+//const student = require('models/student')
 
 mongoose.connect('mongodb://localhost:27017/courseDB',{ 
   useNewUrlParser: true, 
@@ -27,9 +30,9 @@ app.use(express.urlencoded({ extended: true }));
 
 //courses
 app.get('/', (req, res) => {
-  const { test } = 3000
-  console.log(port)
-  res.send('Hello World!')
+  const courses = cours.find()
+  
+  res.json(courses)
 });
 
 app.listen(8000, () => {

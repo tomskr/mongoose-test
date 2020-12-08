@@ -11,4 +11,4 @@ const coursSchema = new Schema({
     startDate: Date
 })
 
-var coursModel = mongoose.model('courseModel','coursSchema')
+module.exports = mongoose.model("cours",coursSchema)
